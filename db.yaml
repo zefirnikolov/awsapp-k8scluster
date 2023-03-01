@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: con-storage
-        image: zefirnikolov/db:latest
+        image: zefirnikolov/db:1
         env:
           - name: MYSQL_ROOT_PASSWORD
             value: "p12345"
