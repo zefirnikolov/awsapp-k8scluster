@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: con-client
+spec:
+  # minReadySeconds: 30
+  replicas: 2
+  selector:
+    matchLabels:
+      app: con-client
+  template:
+    metadata:
+      labels:
+        app: con-client
+    spec:
+      containers:
+      - name: con-client
+        image: zefirnikolov/test:7
+        resources:
+          requests:
+            memory: 20Mi
+            cpu: 100m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: con-client
+
+spec:
+  selector:
+    app: con-client
+  
+  ports:
+    - name: http
+      port: 5000
+  type: ClusterIP

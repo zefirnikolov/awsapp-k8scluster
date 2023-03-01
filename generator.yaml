@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: con-generator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: con-generator
+  template: 
+    metadata:
+      labels:
+        app: con-generator
+    spec:
+      containers:
+      - name: con-generator
+        image: zefirnikolov/test-ge

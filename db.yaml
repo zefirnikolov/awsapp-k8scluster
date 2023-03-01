@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: con-storage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: con-storage
+  template:
+    metadata:
+      labels:
+        app: con-storage
+    spec:
+      containers:
+      - name: con-storage
+        image: zefirnikolov/test-st
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: "p12345"
+        args: ["--default-authentication-plugin=mysql_native_password"]
+        resources:
+          requests:
+            memory: 20Mi
+            cpu: 100m
+#        volumeMounts:
+#          - name: mariadb-persistent-storage
+#            mountPath: /var/lib/mysql
+#      volumes:
+#        - name: mariadb-persistent-storage
+#          persistentVolumeClaim:
+#            claimName: db-pvc
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: con-storage
+spec:
+  selector:
+    app: con-storage
+  ports:
+    - name: db-connect
+      port: 3306
+  type: ClusterIP
