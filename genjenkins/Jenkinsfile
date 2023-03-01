@@ -22,7 +22,7 @@ node
                     sh "git config user.name ZefirNikolov"
                     //sh "git switch master"
                     sh "cat generator.yaml"
-                    sh "sed -i 's+zefirnikolov/gen.*+zefirnikolov/test:${DOCKERTAG}+g' generator.yaml"
+                    sh "sed -i 's+zefirnikolov/gen.*+zefirnikolov/gen:${DOCKERTAG}+g' generator.yaml"
                     sh "cat generator.yaml"
                     sh "git add ."
                     sh "git commit -m 'Done by Jenkins Job: ${env.BUILD_NUMBER}'"
