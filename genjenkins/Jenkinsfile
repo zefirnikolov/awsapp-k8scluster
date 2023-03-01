@@ -21,12 +21,12 @@ node
                     sh "git config user.email zefirnikolov@gmail.com"
                     sh "git config user.name ZefirNikolov"
                     //sh "git switch master"
-                    sh "cat web.yaml"
-                    sh "sed -i 's+zefirnikolov/test.*+zefirnikolov/test:${DOCKERTAG}+g' web.yaml"
-                    sh "cat web.yaml"
+                    sh "cat generator.yaml"
+                    sh "sed -i 's+zefirnikolov/gen.*+zefirnikolov/test:${DOCKERTAG}+g' generator.yaml"
+                    sh "cat generator.yaml"
                     sh "git add ."
                     sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
-                    sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git HEAD:main"
+                    sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/k8scluster.git HEAD:main"
                 }
             }
         }
