@@ -4,7 +4,7 @@ metadata:
   name: con-client
 spec:
   # minReadySeconds: 30
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: con-client
