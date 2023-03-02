@@ -1,18 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: public-routing
+  name: othernamespace
+  namespace: argocd
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - host: app.zefirnikolov.com
+  - host: om.zefirnikolov.com
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: con-client
+            name: argocd-server
             port:
-              number: 5000
+              number: 8080
