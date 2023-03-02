@@ -16,3 +16,13 @@ spec:
             name: con-client
             port:
               number: 5000
+  - host: om.zefirnikolov.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: argocd-server
+            port:
+              number: 8080
