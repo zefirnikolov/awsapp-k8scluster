@@ -16,13 +16,3 @@ spec:
             name: con-client
             port:
               number: 5000
-  - host: om.zefirnikolov.com
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: con-client
-            port:
-              number: 8080
