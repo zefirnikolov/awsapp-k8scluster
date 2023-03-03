@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: zefirnikolov/web:49
+        image: zefirnikolov/web:50
         resources:
           requests:
             memory: 20Mi
