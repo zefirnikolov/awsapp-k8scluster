@@ -1,22 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: con-client
+  name: webapp
   namespace: default
 spec:
   # minReadySeconds: 30
   replicas: 3
   selector:
     matchLabels:
-      app: con-client
+      app: webapp
   template:
     metadata:
       labels:
-        app: con-client
+        app: webapp
     spec:
       containers:
+<<<<<<< Updated upstream
       - name: con-client
         image: zefirnikolov/web:42
+=======
+      - name: webapp
+        image: zefirnikolov/web:41
+>>>>>>> Stashed changes
         resources:
           requests:
             memory: 20Mi
@@ -25,12 +30,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: con-client
+  name: webapp
   namespace: default
 
 spec:
   selector:
-    app: con-client
+    app: webapp
   
   ports:
     - name: http
