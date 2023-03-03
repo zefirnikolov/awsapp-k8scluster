@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: con-generator
-        image: zefirnikolov/gen:19
+        image: zefirnikolov/gen:20
         resources:
           requests:
             memory: 200Mi
