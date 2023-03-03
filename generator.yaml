@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: con-generator
-        image: zefirnikolov/gen:7
+        image: zefirnikolov/gen:8
