@@ -16,3 +16,7 @@ spec:
       containers:
       - name: con-generator
         image: zefirnikolov/gen:11
+        resources:
+          requests:
+            memory: 200Mi
+            cpu: 200m
