@@ -15,7 +15,7 @@ spec:
         app: webapp
     spec:
       containers:
-      - name: con-client
+      - name: webapp
         image: zefirnikolov/web:42
         resources:
           requests:
