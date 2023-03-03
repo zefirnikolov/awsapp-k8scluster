@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: con-client
-        image: zefirnikolov/web:20
+        image: zefirnikolov/web:21
         resources:
           requests:
             memory: 20Mi
