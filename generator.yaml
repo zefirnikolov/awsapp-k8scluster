@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: con-generator
+  name: generator
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: con-generator
+      app: generator
   template: 
     metadata:
       labels:
-        app: con-generator
+        app: generator
     spec:
       containers:
-      - name: con-generator
+      - name: generator
         image: zefirnikolov/gen:21
         resources:
           requests:

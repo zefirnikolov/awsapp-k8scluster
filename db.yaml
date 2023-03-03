@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: con-storage
+  name: mariadb
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: con-storage
+      app: mariadb
   template:
     metadata:
       labels:
-        app: con-storage
+        app: mariadb
     spec:
       containers:
-      - name: con-storage
+      - name: mariadb
         image: zefirnikolov/db:7
         env:
           - name: MYSQL_ROOT_PASSWORD
@@ -35,11 +35,11 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: con-storage
+  name: mariadb
   namespace: default
 spec:
   selector:
-    app: con-storage
+    app: mariadb
   ports:
     - name: db-connect
       port: 3306
