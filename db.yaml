@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: con-storage
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -35,6 +36,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: con-storage
+  namespace: default
 spec:
   selector:
     app: con-storage
