@@ -15,13 +15,8 @@ spec:
         app: webapp
     spec:
       containers:
-<<<<<<< Updated upstream
       - name: con-client
         image: zefirnikolov/web:42
-=======
-      - name: webapp
-        image: zefirnikolov/web:41
->>>>>>> Stashed changes
         resources:
           requests:
             memory: 20Mi
