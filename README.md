@@ -30,5 +30,6 @@ There is 2 Pipelines created for every microservice – 2 Pipelines for the Gene
 ![jobs](jobs.png)
 
 The repositories are separated intentionally:
-The development repositories (generator, db and web) are intended for the **development team**, the code of the app is managed by the developers, the **GitOps** is managed by the DevOps. 
-The K8s cluster repository combines all the microservices in 1 cluster + adds more   -> the ArgoCD itself, an **Ingress Controller** , **SSL Certification** . It exposes the whole app to the internet and makes it available and secure. This repository is managed only by the DevOps, because it commands the whole cluster. 
+
+1. The development repositories (generator, db and web) are intended for the **development team**, the code of the app is managed by the developers, the **GitOps** is managed by the DevOps. 
+2. The K8s cluster repository combines all the microservices in 1 cluster + adds more   -> the ArgoCD itself, an **Ingress Controller** , **SSL Certification** . It exposes the whole app to the internet and makes it available and secure. This repository is managed only by the DevOps, because it commands the whole cluster. 
