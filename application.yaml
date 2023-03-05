@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/zefirnikolov/k8scluster.git
+    repoURL: https://github.com/zefirnikolov/awsapp-k8scluster.git
     targetRevision: HEAD
     path: ./
   destination:
