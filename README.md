@@ -11,7 +11,7 @@ The components are:
 
 The website dynamically changes, because new and new text is added.
 
-The website is **production standard** deployed on an **AWS kubernetes (K8s) cluster**. 
+The website is **production standard** deployed on an **AWS, Kubernetes (K8s) cluster**. 
 
 This repository represents the **.yaml** files that run in the cluster. For successful deployment I am using **Jenkins** as **CI** and **ArgoCD** as **CD**. I am using **GitHub** as a source for **Development** and **Docker Hub** for source for **Deployment**. Also as **ArgoCD** is constantly seeking for changes in the cluster and applying them – this GitHub repository becomes the **Single Source of Truth** for the cluster.
 
