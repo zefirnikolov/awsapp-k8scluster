@@ -1,7 +1,7 @@
 # https://app.zefirnikolov.com
 
 **DevOps/GitOps** workflow:
-This is a simple 3 **microservices** static website – a **random text generator**:
+This is a simple 3 **microservices** static website – a **random text generator**, deployed on **Amazon Web Services (AWS)** infrastructure:
 ![app](app.png)
 The components are: 
 1. **Generator** -> a Python program which generates random text and inserts it into a database - **https://github.com/zefirnikolov/awsapp-genpart**
