@@ -7,7 +7,7 @@ The components are:
 1. **Generator** -> a Python program which generates random text and inserts it into a database - **https://github.com/zefirnikolov/awsapp-genpart**
 2. **MariaDB** -> database which stores the information from the Generator - **https://github.com/zefirnikolov/awsapp-dbpart** 
 3. **Web part** –> an **HTML/CSS** frontend and Python **Flask** backend – the backend gets the randomly generated texts from the **MariaDB** database and expose them to the frontend. - **https://github.com/zefirnikolov/awsapp-webpart**
-4. Kubernetes Cluster -> This repository
+4. **Kubernetes Cluster -> This repository**
 
 The website dynamically changes, because new and new text is added.
 
