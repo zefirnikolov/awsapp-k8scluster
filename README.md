@@ -2,7 +2,7 @@
 
 **DevOps/GitOps** workflow:
 This is a simple 3 **microservices** static website – a **random text generator**:
-**picture**
+![app](app.png)
 The components are: 
 1. **Generator** -> a Python program which generates random text and inserts it into a database - **https://github.com/zefirnikolov/awsapp-genpart**
 2. **MariaDB** database which stores the information from the Generator - **https://github.com/zefirnikolov/awsapp-dbpart** 
