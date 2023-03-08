@@ -22,7 +22,7 @@ One of the Jenkinsfiles with the job in the generator, db or web github repos:
 After successful upload to Docker Hub, the Job Triggers a **second Jenkins JOB**
 
 Jenkins Pipeline 2 (which is based on **this GitHub Repo**)
-This Pipeline Job is triggered from the web, generator, or db 1st Pipeline -> It UPDATES the generator.yaml, db.yaml or web.yaml file respectively  (depending on which Development part a change is made) -> it changes the number of the **docker hub TAG** which the .yaml file pulls from Docker Hub.  Now here comes the CD part – as ArgoCD constantly seeking for changes, because this .yaml files are changed – **ArgoCD** uploads the new .yaml files to the **K8s cluster*
+This Pipeline Job is triggered from the web, generator, or db 1st Pipeline -> It UPDATES the generator.yaml, db.yaml or web.yaml file respectively  (depending on which Development part a change is made) -> it changes the number of the **docker hub TAG** which the .yaml file pulls from Docker Hub.  Now here comes the CD part – as ArgoCD constantly seeking for changes, because this .yaml files are changed – **ArgoCD** uploads the new .yaml files to the **K8s cluster**:
 
 ![jenkinsfiletwo](jenkinsfiletwo.png)
 
