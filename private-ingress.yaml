@@ -9,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
   rules:
-  - host: argocd.example.com
+  - host: ar.zefirnikolov.com
     http:
       paths:
       - path: /
@@ -18,4 +18,4 @@ spec:
           service:
             name: argocd-server
             port:
-              number: 443
+              name: https
