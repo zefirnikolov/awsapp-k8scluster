@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: generator
-        image: zefirnikolov/gen:30
+        image: zefirnikolov/gen:31
         resources:
           requests:
             memory: 200Mi
