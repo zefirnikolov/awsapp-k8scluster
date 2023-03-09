@@ -5,9 +5,11 @@ metadata:
   namespace: argocd
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
   rules:
-  - host: ar.zefirnikolov.com
+  - host: argocd.example.com
     http:
       paths:
       - path: /
@@ -16,4 +18,4 @@ spec:
           service:
             name: argocd-server
             port:
-              number: 8080
+              name: https
