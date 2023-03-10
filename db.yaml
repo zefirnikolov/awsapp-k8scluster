@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mariadb
-        image: zefirnikolov/db:11
+        image: zefirnikolov/db:12
         env:
           - name: MYSQL_ROOT_PASSWORD
             value: "p12345"
