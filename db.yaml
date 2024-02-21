@@ -41,6 +41,6 @@ spec:
   selector:
     app: mariadb
   ports:
-    - name: http
+    - name: tcp-db
       port: 3306
   type: ClusterIP
